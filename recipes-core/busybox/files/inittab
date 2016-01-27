@@ -1,0 +1,23 @@
+# install bb links
+::sysinit:/bin/busybox --install -s
+
+# mount necessary fs
+::sysinit:mount -t proc proc /proc
+::sysinit:mount -t sysfs sysfs /sys
+::sysinit:mount -t tmpfs /tmp /tmp
+::sysinit:mount -t devpts devpts /dev/pts
+
+# set rights for ssh or keyfiles won't be excepted
+::sysinit:chmod 700 /
+
+# populate /dev
+::sysinit:mdev -s
+
+# create fifo file
+::sysinit:mkfifo /www/cgi-bin/btnFIFO
+
+#run rCs (pseudo init)
+::sysinit:/etc/init.d/rcS
+
+# start serial console with login (-)
+ttyAMA0::respawn:/sbin/getty -L ttyAMA0 115200 vt10
