@@ -3,6 +3,7 @@ iotrpi layer.
 
 Please see the corresponding sections below for details.
 
+Maintainer: Michael Offergeld <mioffger@htwg-konstanz.de>
 
 Dependencies
 ============
@@ -16,18 +17,7 @@ This layer depends on:
   layers: meta
   branch: master
 
-  URI: git://git.yoctoproject.org/xxxx
-  layers: xxxx
-  branch: master
 
-
-Patches
-=======
-
-Please submit any patches against the iotrpi layer to the
-xxxx mailing list (xxxx@zzzz.org) and cc: the maintainer:
-
-Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
 
 
 Table of Contents
