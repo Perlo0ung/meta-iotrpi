@@ -6,6 +6,8 @@ IMAGE_INSTALL = " \
 		iotrpi-init \
 		${ROOTFS_PKGMANAGE_BOOTSTRAP} \
 		${CORE_IMAGE_EXTRA_INSTALL} \
+		gpio-mod \
+		led-test \
 "
 
 IMAGE_LINGUAS = " "
