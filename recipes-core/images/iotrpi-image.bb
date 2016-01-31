@@ -1,7 +1,8 @@
 DESCRIPTION = "A minimal console image that supports the iotrpi"
 
+
+#base-files 
 IMAGE_INSTALL = " \
-		base-files \
 		busybox \
 		iotrpi-init \
 		${ROOTFS_PKGMANAGE_BOOTSTRAP} \
