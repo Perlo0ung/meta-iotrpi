@@ -30,7 +30,14 @@ Table of Contents
 I. Adding the iotrpi layer to your build
 =================================================
 
---- replace with specific instructions for the iotrpi layer ---
+Changes to be made in local.conf
+
+MACHINE = "iotrpi"
+DISTRO = "iotrpi"
+GCCVERSION = "4.9%" #GCC 5.2 bug produces non bootable kernelimage 
+PREFERRED_PROVIDER_virtual/kernel = "linux-iotrpi"
+PREFERRED_VERSION_u-boot = "v2016.01%"
+PREFERRED_VERSION_busybox = "1.24.1"
 
 In order to use this layer, you need to make the build system aware of
 it.
@@ -46,8 +53,23 @@ other layers needed. e.g.:
     /path/to/yocto/meta-iotrpi \
     "
 
+To build:
+
+
+bitbake iotrpi-image
 
 II. Misc
 ========
 
---- replace with specific information about the iotrpi layer ---
+Included:
+
+* Mainline Kernel 4.2.3
+* Busybox 1.24.1
+* Uboot v2016.01
+* Small initramfs rootfs
+* GPIO Kernel Driver
+* Led blink testprogram for the GPIO driver
+
+This Image will be compiled for Raspberry Pi and Vexpress-A9
+
+

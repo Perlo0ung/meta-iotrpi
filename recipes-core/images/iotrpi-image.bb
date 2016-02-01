@@ -13,6 +13,7 @@ IMAGE_INSTALL = " \
 
 IMAGE_LINGUAS = " "
 
+EXTRA_IMAGEDEPENDS += " u-boot"
 IMAGE_CLASSES += "uboot-rootfs-img"
 
 LICENSE = "MIT"
