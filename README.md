@@ -10,13 +10,16 @@ Dependencies
 
 This layer depends on:
 
-  URI: git://git.openembedded.org/bitbake
-  branch: master
+```
+URI: git://git.yoctoproject.org/poky
+branch: master
+revision: HEAD
 
-  URI: git://git.openembedded.org/openembedded-core
-  layers: meta
-  branch: master
-
+URI: git://git.openembedded.org/meta-openembedded
+layers: meta-oe, meta-multimedia
+branch: master
+revision: HEAD
+```
 
 Table of Contents
 =================
