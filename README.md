@@ -18,8 +18,6 @@ This layer depends on:
   branch: master
 
 
-
-
 Table of Contents
 =================
 
@@ -48,17 +46,16 @@ Assuming the iotrpi layer exists at the top-level of your
 yocto build tree, you can add it to the build system by adding the
 location of the iotrpi layer to bblayers.conf, along with any
 other layers needed. e.g.:
-
+```
   BBLAYERS ?= " \
     /path/to/yocto/meta \
     /path/to/yocto/meta-yocto \
     /path/to/yocto/meta-iotrpi \
     "
-
+```
 To build:
 
-
-bitbake iotrpi-image
+```bitbake iotrpi-image```
 
 II. Misc
 ========
