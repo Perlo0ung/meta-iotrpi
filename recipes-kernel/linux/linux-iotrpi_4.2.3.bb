@@ -1,4 +1,5 @@
-require linux.inc
+inherit kernel siteinfo
+require recipes-kernel/linux/linux-yocto.inc
 
 DESCRIPTION = "Mainline Linux Kernel" 
 LICENSE = "GPLv2" 
