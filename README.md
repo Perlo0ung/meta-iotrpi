@@ -25,14 +25,19 @@ Table of Contents
 =================
 
   I. Adding the iotrpi layer to your build
+  
  II. Misc
 
 
 I. Adding the iotrpi layer to your build
 =================================================
 
-Changes to be made in local.conf
+How to use it:
 
+- source poky/oe-init-build-env rpi-build
+- Add needed layer to bblayers.conf:
+    - meta-iotrpi
+- Changes to be made in local.conf
 ```
 MACHINE = "iotrpi"
 DISTRO = "iotrpi"
@@ -41,24 +46,9 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-iotrpi"
 PREFERRED_VERSION_u-boot = "v2016.01%"
 PREFERRED_VERSION_busybox = "1.24.1"
 ```
-
-In order to use this layer, you need to make the build system aware of
-it.
-
-Assuming the iotrpi layer exists at the top-level of your
-yocto build tree, you can add it to the build system by adding the
-location of the iotrpi layer to bblayers.conf, along with any
-other layers needed. e.g.:
-```
-  BBLAYERS ?= " \
-    /path/to/yocto/meta \
-    /path/to/yocto/meta-yocto \
-    /path/to/yocto/meta-iotrpi \
-    "
-```
-To build:
-
-```bitbake iotrpi-image```
+- bitbake iotrpi-image
+- copy u-boot.bin, bcm2835-rpi-b.dtb, zImage, boot.scr.uimg, rootfs.cpio.uboot to an sdcard
+- Boot your RPI, or use Qemu
 
 II. Misc
 ========
