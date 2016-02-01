@@ -13,6 +13,8 @@ IMAGE_INSTALL = " \
 
 IMAGE_LINGUAS = " "
 
+IMAGE_CLASSES += "uboot-rootfs-img"
+
 LICENSE = "MIT"
 
 inherit core-image
