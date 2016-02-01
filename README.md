@@ -34,9 +34,8 @@ I. Adding the iotrpi layer to your build
 
 How to use it:
 
-- source poky/oe-init-build-env rpi-build
-- Add needed layer to bblayers.conf:
-    - meta-iotrpi
+- ```source poky/oe-init-build-env rpi-build```
+- Add needed layer to bblayers.conf: ```meta-iotrpi```
 - Changes to be made in local.conf
 ```
 MACHINE = "iotrpi"
@@ -46,7 +45,7 @@ PREFERRED_PROVIDER_virtual/kernel = "linux-iotrpi"
 PREFERRED_VERSION_u-boot = "v2016.01%"
 PREFERRED_VERSION_busybox = "1.24.1"
 ```
-- bitbake iotrpi-image
+- ```bitbake iotrpi-image```
 - copy u-boot.bin, bcm2835-rpi-b.dtb, zImage, boot.scr.uimg, rootfs.cpio.uboot to an sdcard
 - Boot your RPI, or use Qemu
 
