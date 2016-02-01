@@ -1,4 +1,4 @@
-inherit kernel siteinfo
+inherit kernel
 require recipes-kernel/linux/linux-yocto.inc
 
 DESCRIPTION = "Mainline Linux Kernel" 
@@ -7,7 +7,7 @@ SECTION = "kernel"
 COMPATIBLE_MACHINE = "iotrpi"
 
 KERNEL_IMAGETYPE = "zImage"
-LINUX_VERSION ?= "4.2.3"
+LINUX_VERSION = "4.2.3"
 LINUX_VERSION_EXTENSION_append = "-iotrpi"
  
 SRC_URI = "https://www.kernel.org/pub/linux/kernel/v4.x/linux-${PV}.tar.gz;name=mainline \
