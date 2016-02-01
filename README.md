@@ -32,12 +32,14 @@ I. Adding the iotrpi layer to your build
 
 Changes to be made in local.conf
 
+```
 MACHINE = "iotrpi"
 DISTRO = "iotrpi"
 GCCVERSION = "4.9%" #GCC 5.2 bug produces non bootable kernelimage 
 PREFERRED_PROVIDER_virtual/kernel = "linux-iotrpi"
 PREFERRED_VERSION_u-boot = "v2016.01%"
 PREFERRED_VERSION_busybox = "1.24.1"
+```
 
 In order to use this layer, you need to make the build system aware of
 it.
