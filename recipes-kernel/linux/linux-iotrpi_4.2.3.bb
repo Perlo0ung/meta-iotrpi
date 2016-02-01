@@ -6,6 +6,7 @@ LICENSE = "GPLv2"
 SECTION = "kernel"
 COMPATIBLE_MACHINE = "iotrpi"
 
+KERNEL_IMAGETYPE = "zImage"
 LINUX_VERSION ?= "4.2.3"
 LINUX_VERSION_EXTENSION_append = "-iotrpi"
  
