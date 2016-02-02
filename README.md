@@ -29,7 +29,7 @@ I. Adding the iotrpi layer to your build
 
 How to use it:
 
-- ```source poky/oe-init-build-env rpi-build```
+- ```source oe-init-build-env rpi-build```
 - Add needed layer to bblayers.conf: ```meta-iotrpi```
 - Changes to be made in local.conf
 ```
