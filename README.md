@@ -38,7 +38,7 @@ MACHINE = "iotrpi"
 DISTRO = "iotrpi"
 #GCC 5.2 bug produces non bootable kernelimage 
 GCCVERSION = "4.9%"
-#User kernel version from iotrpi layer
+#Use kernel version from iotrpi layer
 PREFERRED_PROVIDER_virtual/kernel = "linux-iotrpi"
 ```
 - ```bitbake iotrpi-image```
