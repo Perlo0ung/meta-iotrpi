@@ -11,13 +11,8 @@ Dependencies
 This layer depends on:
 
 ```
-URI: git://git.yoctoproject.org/poky
-branch: master
-revision: HEAD
-
-URI: git://git.openembedded.org/meta-openembedded
-layers: meta-oe, meta-multimedia
-branch: master
+URI: git://git.yoctoproject.org/poky.git
+branch: jethro
 revision: HEAD
 ```
 
