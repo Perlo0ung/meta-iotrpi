@@ -33,12 +33,13 @@ How to use it:
 - Add needed layer to bblayers.conf: ```meta-iotrpi```
 - Changes to be made in local.conf
 ```
+#Set Machnie and distro that will be build
 MACHINE = "iotrpi"
 DISTRO = "iotrpi"
-GCCVERSION = "4.9%" #GCC 5.2 bug produces non bootable kernelimage 
+#GCC 5.2 bug produces non bootable kernelimage 
+GCCVERSION = "4.9%"
+#User kernel version from iotrpi layer
 PREFERRED_PROVIDER_virtual/kernel = "linux-iotrpi"
-PREFERRED_VERSION_u-boot = "v2016.01%"
-PREFERRED_VERSION_busybox = "1.24.1"
 ```
 - ```bitbake iotrpi-image```
 - copy u-boot.bin, bcm2835-rpi-b.dtb, zImage, boot.scr.uimg, rootfs.cpio.uboot to an sdcard
