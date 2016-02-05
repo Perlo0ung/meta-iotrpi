@@ -24,3 +24,9 @@ do_install () {
 	#setup link for /bin/sh so QA stage passes
 	ln -sf busybox ${D}${base_bindir}/sh
 }
+
+python do_menuconfig () {
+        oe_terminal("${SHELL} -c \"make menuconfig; if [ \$? -ne 0 ]; then echo 'Command failed.'; printf 'Press any key to continue... '; read r; fi\"", '${PN} Configuration', d)
+}
+
+addtask menuconfig
