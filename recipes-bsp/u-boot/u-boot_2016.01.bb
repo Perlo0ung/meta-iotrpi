@@ -7,13 +7,10 @@ BOOT_SCRIPT_UBOOT = "boot_script.txt"
 DEPENDS += "u-boot-mkimage-native"
 
 SRCREV = "fa85e826c16b9ce1ad302a57e9c4b24db0d8b930"
-
 SRC_URI += "file://${BOOT_SCRIPT_UBOOT}"
 
 UBOOT_MACHINE = "rpi_defconfig"
 UBOOT_MAKE_TARGET = "u-boot.bin"
-
-COMPATIBLE_MACHINE = "iotrpi"
 
 PV = "v2016.01+git${SRCPV}"
 
