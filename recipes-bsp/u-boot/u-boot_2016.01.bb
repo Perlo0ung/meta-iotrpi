@@ -21,3 +21,9 @@ do_compile_append() {
     # Create boot script
     ${STAGING_BINDIR_NATIVE}/uboot-mkimage -C none -A arm -T script -d ${WORKDIR}/${BOOT_SCRIPT_UBOOT} ${DEPLOY_DIR_IMAGE}/boot.scr.uimg
 }
+
+python do_menuconfig () {
+        oe_terminal("${SHELL} -c \"make menuconfig; if [ \$? -ne 0 ]; then echo 'Command failed.'; printf 'Press any key to continue... '; read r; fi\"", '${PN} Configuration', d)
+}
+
+addtask menuconfig
