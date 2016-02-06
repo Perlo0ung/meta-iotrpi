@@ -1,5 +1,6 @@
-DESCRIPTION = "A minimal console image that supports the iotrpi"
+inherit core-image
 
+DESCRIPTION = "A minimal console image that supports the iotrpi"
 
 #base-files 
 IMAGE_INSTALL = " \
@@ -11,14 +12,9 @@ IMAGE_INSTALL = " \
 		led-test \
 "
 
-IMAGE_LINGUAS = " "
-
 EXTRA_IMAGEDEPENDS += " u-boot"
 IMAGE_CLASSES += "uboot-rootfs-img"
 
-LICENSE = "MIT"
-
-inherit core-image
 
 
 
