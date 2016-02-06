@@ -11,6 +11,7 @@ IMAGE_INSTALL = " \
 		gpio-mod \
 		led-test \
 "
+IMAGE_LINGUAS = " "
 
 EXTRA_IMAGEDEPENDS += " u-boot"
 IMAGE_CLASSES += "uboot-rootfs-img"

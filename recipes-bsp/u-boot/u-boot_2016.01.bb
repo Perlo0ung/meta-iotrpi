@@ -12,9 +12,10 @@ SRC_URI += "file://${BOOT_SCRIPT_UBOOT}"
 UBOOT_MACHINE = "rpi_defconfig"
 UBOOT_MAKE_TARGET = "u-boot.bin"
 
+
 PV = "v2016.01+git${SRCPV}"
 
-do_compile_append() {
+do_deploy_append() {
     # Create boot script
     ${STAGING_BINDIR_NATIVE}/uboot-mkimage -C none -A arm -T script -d ${WORKDIR}/${BOOT_SCRIPT_UBOOT} ${DEPLOY_DIR_IMAGE}/boot.scr.uimg
 }
